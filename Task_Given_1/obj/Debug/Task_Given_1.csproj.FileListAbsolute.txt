@@ -1,0 +1,7 @@
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\bin\Debug\Task_Given_1.exe.config
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\bin\Debug\Task_Given_1.exe
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\bin\Debug\Task_Given_1.pdb
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\obj\Debug\Task_Given_1.csproj.CoreCompileInputs.cache
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\obj\Debug\Task_Given_1.exe
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\obj\Debug\Task_Given_1.pdb
+D:\.NET\C# Basics Concepts\ConsoleApp1\Task_Given_1\Task_Given_1\obj\Debug\Task_Given_1.csproj.AssemblyReference.cache

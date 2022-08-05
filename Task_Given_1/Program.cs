@@ -1,48 +1,67 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Introduction_Task_Given
 {
     public class Program
     {
-        public void action(string sign)
+        int count = 0;
+        public void Action(string sign)
         {
             Console.WriteLine("Enter First Value");
-            double a = Convert.ToDouble(Console.ReadLine());
+            int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Second Value");
-            double b = Convert.ToDouble(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
             double total;
-            switch (sign)
+            try
             {
-                case "+":
-                    total = a + b;
-                    Console.WriteLine("The addition is " + total);
-                    AnswerYES(total);
-                    break;
-                case "-":
-                    total = a - b;
-                    Console.WriteLine("The substraction is " + total);
-                    AnswerYES(total);
-                    break;
-                case "*":
-                    total = a * b;
-                    Console.WriteLine("The multiplication is " + total);
-                    AnswerYES(total);
-                    break;
-                case "/":
-                    total = a / b;
-                    Console.WriteLine("The division is " + total);
-                    AnswerYES(total);
-                    break;
-                default:
-                    Console.WriteLine("Invalid Input");
-                    break;
+                switch (sign)
+                {
+                    case "+":
+                        total = a + b;
+                        Console.WriteLine("The addition is " + total);
+                        break;
+                    case "-":
+                        total = a - b;
+                        Console.WriteLine("The substraction is " + total);
+                        break;
+                    case "*":
+                        total = a * b;
+                        Console.WriteLine("The multiplication is " + total);
+                        break;
+                    case "/":
+                        total = a / b;
+                        Console.WriteLine("The division is " + total);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Input");
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                this.count++;
+                Console.WriteLine("-----------------------------------------------------------");
+                Console.WriteLine(" Exception Occured {0} Times, Now You have {1} More Chance...! ", count, 4 - count);
+                Console.WriteLine("----------------------------------------------------------");
+            }
+            finally
+            {
+                ExceptionAnswer(count);
             }
         }
-        public void AnswerYES(double total)
+        public void ExceptionAnswer(int count)
+        {
+            if (this.count <= 3)
+            {
+                AnswerYES();
+            }
+            else
+            {
+                Console.WriteLine("Your Trials Are Over...!");
+            }
+        }
+        public void AnswerYES()
         {
             Console.WriteLine("Press 'y' for Continue and 'n' for End of the Calculations...");
             string ans = Convert.ToString(Console.ReadLine());
@@ -50,35 +69,35 @@ namespace Introduction_Task_Given
             {
                 Console.WriteLine("Which Operation You Wants to Continue...?");
                 string sign = Convert.ToString(Console.ReadLine());
-                moreAction(sign, total);
+                MoreAction(sign);
             }
             else
             {
                 Console.WriteLine("End of the Calculations...");
             }
         }
-        public void moreAction(string sign, double total)
+        public void MoreAction(string sign)
         {
             switch (sign)
             {
                 case "+":
                     {
-                        action(sign);
+                        Action(sign);
                     }
                     break;
                 case "-":
                     {
-                        action(sign);
+                        Action(sign);
                     }
                     break;
                 case "*":
                     {
-                        action(sign);
+                        Action(sign);
                     }
                     break;
                 case "/":
                     {
-                        action(sign);
+                        Action(sign);
                     }
                     break;
                 default:
@@ -96,22 +115,22 @@ namespace Introduction_Task_Given
             {
                 case "+":
                     {
-                        program.action(operation);
+                        program.Action(operation);
                     }
                     break;
                 case "-":
                     {
-                        program.action(operation);
+                        program.Action(operation);
                     }
                     break;
                 case "*":
                     {
-                        program.action(operation);
+                        program.Action(operation);
                     }
                     break;
                 case "/":
                     {
-                        program.action(operation);
+                        program.Action(operation);
                     }
                     break;
                 default:
